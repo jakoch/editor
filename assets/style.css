@@ -5,11 +5,12 @@ body, html, form, .foo {
 }
 
 /*
- * Container for Left, Right, Center
+ * Wrapper for Left, Right, Center
  */
-#container {
-    width:100%;
-    text-align:center;
+#wrapper {
+    position: relative !important;
+    top: 50px !important;
+    height: 100%;
 }
 
 #left {
@@ -24,14 +25,11 @@ body, html, form, .foo {
 }
 
 #right {
-    float:right;
-    width:50%;
+    float:left;
+
     border-left: 1px solid #808080;
-    float: right;
     height: 100%;
-    line-height: 16px;
     padding: 10px 7px;
-    width: 49%;
 }
 
 /*
@@ -65,22 +63,9 @@ body, html, form, .foo {
  * Buttons
  */
 .btn-run {
-    font-size: 16px;
-    border-radius: 4px;
-
-    float: right;
-    font-size: 11px;
     line-height: 16px;
-    padding: 4px 10px;
     position: absolute;
     top: 8px;
-    left: 44%;
-    z-index: 99999;
-}
-
-.btn-green {
-    background-color: #2B995B;
-    border: 1px solid #217E4A;
 }
 
 [class*='btn-'] {
