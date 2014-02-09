@@ -1,0 +1,159 @@
+body, html, form, .foo {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+/*
+ * Container for Left, Right, Center
+ */
+#container {
+    width:100%;
+    text-align:center;
+}
+
+#left {
+    float:left;
+    width:50%;
+}
+
+#center {
+    display: inline-block;
+    margin:0 auto;
+    width:33%;
+}
+
+#right {
+    float:right;
+    width:50%;
+    border-left: 1px solid #808080;
+    float: right;
+    height: 100%;
+    line-height: 16px;
+    padding: 10px 7px;
+    width: 49%;
+}
+
+/*
+ * CodeMirror
+ */
+.CodeMirror,
+.CodeMirror-scroll {
+    border: 0;
+    min-height: 100%;
+    width: 100%;
+    height: auto;
+    line-height: 21px;
+
+    display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            z-index: 9999;
+            margin: 0;
+            padding: 0;
+            border: 0px solid #BBBBBB;
+            opacity: 1;
+      border-left: 1px solid black;
+}
+
+.activeline {background: #e8f2ff !important;}
+
+/*
+ * Buttons
+ */
+.btn-run {
+    font-size: 16px;
+    border-radius: 4px;
+
+    float: right;
+    font-size: 11px;
+    line-height: 16px;
+    padding: 4px 10px;
+    position: absolute;
+    top: 8px;
+    left: 44%;
+    z-index: 99999;
+}
+
+.btn-green {
+    background-color: #2B995B;
+    border: 1px solid #217E4A;
+}
+
+[class*='btn-'] {
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.08);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.08);
+    color: #fff;
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    padding: 8px 16px;
+    text-decoration: none;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+
+    -webkit-transition: background-color 0.1s linear;
+    -moz-transition: background-color 0.1s linear;
+    -o-transition: background-color 0.1s linear;
+      transition: background-color 0.1s linear;
+}
+
+[class*='btn-']:hover {
+    cursor: pointer;
+}
+
+.btn-blue {
+    background-color: rgb( 51, 102, 204 );
+    border: 1px solid rgb( 44, 91, 104 );
+}
+
+    .btn-blue:hover {
+        background-color: rgb( 58, 131, 213 );
+    }
+
+    .btn-blue:active {
+        background-color: rgb( 42, 91, 191 );
+    }
+
+.btn-primary {
+background-color: rgb( 74, 61, 117 );
+border: 1px solid rgb( 44, 37, 59 );
+}
+
+.btn-primary:hover {
+    background-color: rgb( 92, 76, 131 );
+}
+
+.btn-primary:active {
+    background-color: rgb( 54, 44, 87 );
+}
+
+.btn-red {
+background-color: rgb( 207, 56, 91 );
+border: 1px solid rgb( 187, 40, 74 );
+}
+
+.btn-red:hover {
+    background-color: rgb( 227, 77, 130 );
+}
+
+.btn-red:active {
+    background-color: rgb( 187, 40, 74 );
+}
+
+.btn-green {
+background-color: rgb( 43, 153, 91 );
+border: 1px solid rgb( 33, 126, 74 );
+}
+
+.btn-green:hover {
+    background-color: rgb( 75, 183, 141 );
+}
+
+.btn-green:active {
+    background-color: rgb( 33, 126, 74 );
+}

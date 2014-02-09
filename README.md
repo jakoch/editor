@@ -1,4 +1,9 @@
 editor
 ======
 
-A PHP in-browser editor - based on eval() and CodeMirror3.
+A simple PHP in-browser editor.
+
+Using
+ - PHP's eval() for code evaluation
+ - CodeMirror3 as Javascript Editor
+ - jQuery2
