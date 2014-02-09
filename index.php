@@ -11,7 +11,7 @@
     <script src="assets/js/jquery/jquery-2.1.0.min.js" type="text/javascript"></script>
 
     <!-- Bootstrap -->
-    <script src="assets/js/bootstrap/boostrap.min.js" type="text/javascript"></script>
+    <script src="assets/js/bootstrap/bootstrap.min.js" type="text/javascript"></script>
     <link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
 
     <!-- The CodeMirror -->
