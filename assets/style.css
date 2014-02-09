@@ -32,6 +32,11 @@ body, html, form, .foo {
     padding: 10px 7px;
 }
 
+/* jakoch's red border */
+.navbar {
+    border-top: 4px solid #D73D3D;
+}
+
 /*
  * CodeMirror
  */
