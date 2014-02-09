@@ -3,7 +3,7 @@ editor
 
 A simple PHP in-browser editor.
 
-![php-editor](https://f.cloud.github.com/assets/85608/2120466/e213a27c-91b5-11e3-8583-3d3528cb4056.png)
+![php-editor](https://f.cloud.github.com/assets/85608/2120481/75dca72e-91b6-11e3-90c0-728ab33585aa.jpg)
 
 ### Using
  - PHP's eval() for code evaluation
