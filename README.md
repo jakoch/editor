@@ -7,8 +7,9 @@ A simple PHP in-browser editor.
 
 ### Usage
 
- - Enter PHP code in the textarea on the right side.
+ - Enter PHP code in the textarea on the left side.
  - Evaluate the PHP by pressing the "F9" key or clicking the "Run" button in the top navigation bar.
+ - Find the evaluated PHP on the right side.
 
 ### Features
 
