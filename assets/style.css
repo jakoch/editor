@@ -1,7 +1,7 @@
 body, html, form, .foo {
-	margin: 0;
-	padding: 0;
-	height: 100%;
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
 
 /*
@@ -34,7 +34,7 @@ body, html, form, .foo {
 
 /* jakoch's red border */
 .navbar {
-    border-top: 4px solid #D73D3D;
+    border-top: 4px solid #D73D3D !important;
 }
 
 /*
@@ -45,24 +45,21 @@ body, html, form, .foo {
     border: 0;
     min-height: 100%;
     width: 100%;
-    height: auto;
     line-height: 21px;
-
     display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 50%;
-            height: 100%;
-            z-index: 9999;
-            margin: 0;
-            padding: 0;
-            border: 0px solid #BBBBBB;
-            opacity: 1;
-      border-left: 1px solid black;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    border-left: 1px dashed #ff0000;
+    opacity: 1;
 }
 
-.activeline {background: #e8f2ff !important;}
+.CodeMirror-highlightErrorline-background {
+    background: #990000 !important;
+}
+
+.lint-error {font-family: Sans-serif; background: #ffa; color: #a00; padding: 2px 5px 3px; }
+.lint-error-icon {color: white; background-color: red; font-weight: bold; border-radius: 50%; padding: 0 3px; margin-right: 7px;}
 
 /*
  * Buttons
