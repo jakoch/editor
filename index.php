@@ -60,6 +60,23 @@
 
 var widgets = []
 
+function resetWidgets() {
+	for (var i = 0; i < widgets.length; ++i)
+      editor.removeLineWidget(widgets[i]);
+    widgets.length = 0;
+}
+
+function createLineWidget(line, message) {
+	var msg = document.createElement("div");
+    var icon = msg.appendChild(document.createElement("span"));
+    icon.innerHTML = "!!";
+    icon.className = "lint-error-icon";
+    msg.appendChild(document.createTextNode(message));
+    msg.className = "lint-error";
+
+    widgets.push(editor.addLineWidget(line, msg, {coverGutter: false, noHScroll: true}));
+}
+
     function submitCode() {
         var xhr = $.ajax({
             type: "POST",
@@ -72,31 +89,16 @@ var widgets = []
                 // handle error
                 var error = $.parseJSON( xhr.getResponseHeader("Z-Error") );
                 if(error) {
-                    editor.clearGutter();
-                    // set codemirror error dot and highlight line
+                    // highlight the error line
                     editor.addLineClass(error.line, "background", "CodeMirror-highlightErrorline-background");
+                    // set focus to line after the error
                     editor.setCursor({line: error.line+1});
                     editor.focus();
-
-                    for (var i = 0; i < widgets.length; ++i)
-                      editor.removeLineWidget(widgets[i]);
-                    widgets.length = 0;
-
-                    var msg = document.createElement("div");
-                    var icon = msg.appendChild(document.createElement("span"));
-                    icon.innerHTML = "!!";
-                    icon.className = "lint-error-icon";
-                    msg.appendChild(document.createTextNode(error.message));
-                    msg.className = "lint-error";
-
-                    widgets.push(editor.addLineWidget(error.line - 1, msg, {coverGutter: false, noHScroll: true}));
-
+                    // set error line widget above the error line
+                    resetWidgets();
+                    createLineWidget(error.line-1, error.message);
                 } else {
-                    editor.clearGutter();
-
-                    for (var i = 0; i < widgets.length; ++i)
-                      editor.removeLineWidget(widgets[i]);
-                    widgets.length = 0;
+                	resetWidgets();
                 }
             }
         });
