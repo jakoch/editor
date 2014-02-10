@@ -66,6 +66,13 @@ function resetWidgets() {
     widgets.length = 0;
 }
 
+function resetLineClasses()
+{
+    lineCount = editor.doc.size;
+    for (var i = 0; i < lineCount; ++i)
+        editor.removeLineClass(i, "background");
+}
+
 function createLineWidget(line, message) {
 	var msg = document.createElement("div");
     var icon = msg.appendChild(document.createElement("span"));
@@ -99,6 +106,7 @@ function createLineWidget(line, message) {
                     createLineWidget(error.line-1, error.message);
                 } else {
                 	resetWidgets();
+                    resetLineClasses();
                 }
             }
         });
